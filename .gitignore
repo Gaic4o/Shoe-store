@@ -1,0 +1,5 @@
+node_modules
+minsu.pem
+.env
+.next 
+minsu-aws.pem
