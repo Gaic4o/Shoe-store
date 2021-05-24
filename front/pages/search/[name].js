@@ -85,7 +85,7 @@ function Search() {
             <DivInfo key={c.id} product={c}>
              
                  <a href={`/product/info/${c.id}`} >
-                 <SearchImg src={`http://localhost:3060/${c.Images[0].src}`} />
+                 <SearchImg src={`${backUrl}/${c.Images[0].src}`} />
                  </a>
                  <SearchH1>{c.Title}</SearchH1>
                  <SearchP>{c.Price}</SearchP>

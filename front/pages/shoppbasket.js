@@ -51,7 +51,7 @@ export const Thead = styled.thead`
 function shoppbasket() {
     const { me } = useSelector((state) => state.user);
 
-    const { data: CartData, error: CartError } = useSWR(`http://localhost:3060/user/Carts`, fetcher)
+    const { data: CartData, error: CartError } = useSWR(`${backUrl}/user/Carts`, fetcher)
 
     useEffect(() => {
         if (!(me && me.id)) {

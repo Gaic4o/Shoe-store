@@ -55,7 +55,7 @@ function FileUpload(props) {
             header: {'content-type': 'multipart/form-data'} // 어떤 파일 인지
         }
         formData.append("file", files[0])
-        axios.post('http://localhost:3060/product/image', formData, config)
+        axios.post(`${backUrl}/product/image`, formData, config)
         .then(response => {
           if(response.data.success) {
             console.log(response.data)
@@ -97,7 +97,7 @@ function FileUpload(props) {
       <Confirm>
         {Images.map((image, index) => (
             <div onClick={() => deleteHandler(image)} key={index}>
-                <ConfirmImg src={`http://localhost:3060/${image}`} />
+                <ConfirmImg src={`${backUrl}/${image}`} />
             </div>
         ))}
       </Confirm>

@@ -149,7 +149,7 @@ function Product({  })  {
     
         <Infomat>
       <InfoImg>
-      <Img src={`http://localhost:3060/${productinfo.Images[0].src}`} />
+      <Img src={`${backUrl}/${productinfo.Images[0].src}`} />
       </InfoImg>
 
       <InfoCard>

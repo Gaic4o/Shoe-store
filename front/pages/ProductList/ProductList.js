@@ -202,7 +202,7 @@ function ShoesNames() {
         
             <CardImg>
             <a href={`/product/info/${product.id}`} >
-            <Img src={`http://localhost:3060/${product.Images[0].src}`} />
+            <Img src={`${backUrl}/${product.Images[0].src}`} />
             </a>
 
             </CardImg>
