@@ -1,1 +1,1 @@
-exports.backUrl = 'http://localhost:3060';
+exports.backUrl = 'http://13.125.255.12';

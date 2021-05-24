@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app",
-    "start": "node app"
+    "start": "cross-env NODE_ENV=production pm2 start app.js"
   },
   "author": "Minsu",
   "license": "ISC",
@@ -15,10 +15,11 @@
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "helmet": "^4.4.1",
+    "helmet": "^4.6.0",
     "hpp": "^0.2.3",
     "http-errors": "^1.7.2",
     "morgan": "^1.10.0",
@@ -26,7 +27,8 @@
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-kakao": "^1.0.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "pm2": "^4.5.6"
   },
   "devDependencies": {
     "eslint": "^7.24.0",
