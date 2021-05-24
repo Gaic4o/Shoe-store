@@ -5,7 +5,6 @@ import { END } from 'redux-saga';
 import axios from 'axios';
 import wrapper from '../store/configureStore';
 import {LOAD_MY_INFO_REQUESTS } from '../reducers/user'
-import { PRODUCT_INFO_REQUEST } from '../reducers/product'
 import Header from '../components/Header'
 import Footer from '../components/Footer';
 import useSWR from 'swr';

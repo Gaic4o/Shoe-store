@@ -7,10 +7,8 @@ import { PRODUCT_INFO_REQUEST } from '../reducers/product'
 import { LOAD_MY_INFO_REQUESTS, CHANGE_NICKNAME_REQUEST, CHANGE_EMAIL_REQUEST, CHANGE_NAME_REQUEST } from '../reducers/user'
 import wrapper from '../store/configureStore'
 import axios from 'axios';
-import useSWR from 'swr';
 import Router from 'next/router';
 import Footer from '../components/Footer'
-// import Cart from '../components/Cart'
 import styled from 'styled-components';
 
 
