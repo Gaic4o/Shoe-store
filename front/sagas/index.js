@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import userSaga from './user';
 import productSaga from './product';
-import { backUrl } from '../config/config';
+import { backUrl } from '../config/back/config';
 
 
 axios.defaults.baseURL = backUrl;

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { backUrl } from '../../config/config';
+import { backUrl } from '../../config/back/config';
 
 export const Data = styled.div`
     

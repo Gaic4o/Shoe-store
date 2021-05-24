@@ -10,7 +10,7 @@ import { LOAD_INFO_NAMES_REQUEST } from '../../reducers/product'
 import wrapper from '../../store/configureStore';
 import { LOAD_MY_INFO_REQUESTS } from '../../reducers/user';
 import styled from 'styled-components';
-import { backUrl } from '../../config/config';
+import { backUrl } from '../../config/back/config';
 
 
 export const SearchBox = styled.div`
