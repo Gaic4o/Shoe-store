@@ -5,7 +5,6 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const productRouter = require('./routes/product');
 const userRouter = require('./routes/user');
-const passportConfig = require('./passport');
 const passport = require('passport');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
