@@ -1,4 +1,5 @@
 import React from 'react';
+import { backUrl } from '../config/config';
 
   function ImageSlider(props) {
     return (
@@ -6,7 +7,7 @@ import React from 'react';
          {props.images.map((image, index) => (
              <div key={index}>
                  <img style={{ width: '100%', maxHeight: '150px' }}
-                  src={`http://localhost:3060${image}`} />
+                  src={`${backUrl}${image}`} />
              </div>
          ))}
       </div>

@@ -10,6 +10,7 @@ import { LOAD_INFO_NAMES_REQUEST } from '../../reducers/product'
 import wrapper from '../../store/configureStore';
 import { LOAD_MY_INFO_REQUESTS } from '../../reducers/user';
 import styled from 'styled-components';
+import { backUrl } from '../../config/config';
 
 
 export const SearchBox = styled.div`
@@ -85,7 +86,7 @@ function Search() {
             <DivInfo key={c.id} product={c}>
              
                  <a href={`/product/info/${c.id}`} >
-                 <SearchImg src={`http://localhost:3060/${c.Images[0].src}`} />
+                 <SearchImg src={`${backUrl}/${c.Images[0].src}`} />
                  </a>
                  <SearchH1>{c.Title}</SearchH1>
                  <SearchP>{c.Price}</SearchP>

@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import styled from 'styled-components';
+import { backUrl } from '../../config/config';
 
 
 
@@ -202,7 +203,7 @@ function ShoesNames() {
         
             <CardImg>
             <a href={`/product/info/${product.id}`} >
-            <Img src={`http://localhost:3060/${product.Images[0].src}`} />
+            <Img src={`${backUrl}/${product.Images[0].src}`} />
             </a>
 
             </CardImg>

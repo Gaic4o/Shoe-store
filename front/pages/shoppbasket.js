@@ -10,7 +10,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer';
 import useSWR from 'swr';
 import styled from 'styled-components';
-
+import { backUrl } from '../../config/config';
 const fetcher = (url) => axios.get(url, { withCredentials: true }).then((result) => result.data);
 
 
@@ -51,7 +51,7 @@ export const Thead = styled.thead`
 function shoppbasket() {
     const { me } = useSelector((state) => state.user);
 
-    const { data: CartData, error: CartError } = useSWR(`http://localhost:3060/user/Carts`, fetcher)
+    const { data: CartData, error: CartError } = useSWR(`${backUrl}/user/Carts`, fetcher)
 
     useEffect(() => {
         if (!(me && me.id)) {

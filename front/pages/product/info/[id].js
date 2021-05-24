@@ -13,7 +13,7 @@ import CommentForm from '../../../components/CommentForm';
 import ShoppBasket from '../../../components/ShoppBasket';
 import { List, Comment, Avatar } from 'antd';
 import moment from 'moment'
-
+import { backUrl } from '../../config/config';
 
 
 moment.locale('ko');
@@ -149,7 +149,7 @@ function Product({  })  {
     
         <Infomat>
       <InfoImg>
-      <Img src={`http://localhost:3060/${productinfo.Images[0].src}`} />
+      <Img src={`${backUrl}/${productinfo.Images[0].src}`} />
       </InfoImg>
 
       <InfoCard>
