@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://3.34.1.213', 'minsumall'],
+  origin: ['http://localhost:3000', 'http://13.124.128.78', 'minsumall'],
   credentials: true,
 }));
 
