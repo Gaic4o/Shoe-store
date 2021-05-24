@@ -125,7 +125,7 @@ try {
   setLoading(true);
   const newrespoon = await axios.get(`${backUrl}/product/new`);
   const heaprespon = await axios.get(`${backUrl}/product/heap`);
-  const Casualrespon = await axios.get(`${backUrl}0/product/Casual`)
+  const Casualrespon = await axios.get(`${backUrl}/product/Casual`)
   const Exerciserespon = await axios.get(`${backUrl}/product/Exercise`)
   setNew(newrespoon.data);
   setHeap(heaprespon.data);
