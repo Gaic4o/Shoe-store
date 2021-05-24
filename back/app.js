@@ -10,8 +10,6 @@ const passport = require('passport');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const path = require('path');
-const hpp = require('hpp');
-const helmet = require('helmet')
 
 
 
@@ -25,19 +23,13 @@ db.sequelize.sync()
   .catch(console.error);
 passportConfig();
 
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(morgan('combined'));
-  app.use(hpp());
-  app.use(helmet());
-} else {
-  app.use(morgan('dev'));
-}
-
+app.use(morgan('dev'));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://13.124.128.78', 'minsumall'],
+  origin: 'http://localhost:3000',
   credentials: true,
 }));
+
+
 
 
 // cors 오류가 나는 이유. 3000 -> 3065 보낼 떄 access control origial 를 해줘야 함 - 라이브러리 cors 를 사용.
@@ -62,6 +54,6 @@ app.use('/user', userRouter);
 app.use('/product', productRouter);
 app.use('/uploads', express.static('uploads'));
 
-app.listen(80, () => {
+app.listen(3060, () => {
   console.log('서버 실행 중!');
 });

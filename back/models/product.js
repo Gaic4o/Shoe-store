@@ -43,7 +43,6 @@ static associate(db) {
     db.Product.hasMany(db.Image); // addImages, getImages
     db.Product.hasMany(db.Comment);
     db.Product.belongsToMany(db.User, { through: 'Cart', as: 'Carts' }) // Cart 
-    db.Product.belongsToMany(db.User, { through: 'Love', as: 'Loves' }) // 찜.
 }
 }
 

@@ -6,7 +6,7 @@ import React from 'react';
          {props.images.map((image, index) => (
              <div key={index}>
                  <img style={{ width: '100%', maxHeight: '150px' }}
-                  src={`${backUrl}${image}`} />
+                  src={`http://localhost:3060${image}`} />
              </div>
          ))}
       </div>

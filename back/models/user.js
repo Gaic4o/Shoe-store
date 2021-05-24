@@ -35,7 +35,6 @@ module.exports = class User extends Model {
         db.User.hasMany(db.Comment);
         db.User.belongsToMany(db.Product, { through: 'Cart', as: 'Cartd' })
         db.User.belongsToMany(db.Product, { through: 'Love', as: 'Loved' }) // 찜.
-        db.User.belongsToMany(db.Image, { through: 'OpImage', as: 'Imaged' }) // 이미지
     }
 }
     

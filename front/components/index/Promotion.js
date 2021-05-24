@@ -122,10 +122,10 @@ try {
   setCasual(null);
   setExercise(null);
   setLoading(true);
-  const newrespoon = await axios.get(`${backUrl}/product/new`);
-  const heaprespon = await axios.get(`${backUrl}/product/heap`);
-  const Casualrespon = await axios.get(`${backUrl}/product/Casual`)
-  const Exerciserespon = await axios.get(`${backUrl}/product/Exercise`)
+  const newrespoon = await axios.get(`http://localhost:3060/product/new`);
+  const heaprespon = await axios.get(`http://localhost:3060/product/heap`);
+  const Casualrespon = await axios.get(`http://localhost:3060/product/Casual`)
+  const Exerciserespon = await axios.get(`http://localhost:3060/product/Exercise`)
   setNew(newrespoon.data);
   setHeap(heaprespon.data);
   setCasual(Casualrespon.data);
@@ -154,7 +154,7 @@ fetchUsers();
     return <Data key={index}>
         <Box>
             <a href={`/product/info/${product.id}`} >
-      <Img src={`${backUrl}/${product.Images[0].src}`} />
+      <Img src={`http://localhost:3060/${product.Images[0].src}`} />
       </a>
       <H1>{product.Title}</H1>
       <P>{product.Price}</P>
@@ -166,7 +166,7 @@ fetchUsers();
     return <Data key={index}>
         <Box>
             <a href={`/product/info/${product.id}`} >
-      <Img src={`${backUrl}/${product.Images[0].src}`} />
+      <Img src={`http://localhost:3060/${product.Images[0].src}`} />
       </a>
       <H1>{product.Title}</H1>
       <P>{product.Price}</P>
@@ -177,7 +177,7 @@ fetchUsers();
       return <Data key={index}>
           <Box>
           <a href={`/product/info/${product.id}`} >
-      <Img src={`${backUrl}/${product.Images[0].src}`} />
+      <Img src={`http://localhost:3060/${product.Images[0].src}`} />
       </a>
       <H1>{product.Title}</H1>
       <P>{product.Price}</P>
@@ -188,7 +188,7 @@ fetchUsers();
       return <Data key={index}>
           <Box>
               <a href={`/product/info/${product.id}`}>
-                  <Img src={`${backUrl}/${product.Images[0].src}`} />
+                  <Img src={`http://localhost:3060/${product.Images[0].src}`} />
               </a>
               <H1>{product.Title}</H1>
               <P>{product.Price}</P>

@@ -3,9 +3,9 @@ import axios from 'axios';
 
 import userSaga from './user';
 import productSaga from './product';
-import { backUrl } from '../config/config';
 
-axios.defaults.baseURL = backUrl;
+
+axios.defaults.baseURL = 'http://localhost:3060';
 axios.defaults.withCredentials = true;
 
 export default function* rootSaga() {
