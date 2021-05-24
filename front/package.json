@@ -9,7 +9,6 @@
   },
   "author": "Minsu",
   "license": "ISC",
-  "homepage": " https://gaic4o.github.io/Shoe-store",
   "dependencies": {
     "@next/bundle-analyzer": "^10.2.2",
     "@zeit/next-css": "^1.0.1",
