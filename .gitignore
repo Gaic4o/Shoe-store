@@ -1,5 +1,4 @@
 node_modules
 .env
 .next 
-shoes-mall-aws.pem
 shoes-mall.pem
