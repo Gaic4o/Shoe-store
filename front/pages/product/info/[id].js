@@ -13,7 +13,7 @@ import CommentForm from '../../../components/CommentForm';
 import ShoppBasket from '../../../components/ShoppBasket';
 import { List, Comment, Avatar } from 'antd';
 import moment from 'moment'
-import { backUrl } from '../../../config/back/config'
+import { backUrl } from '../../../config/config'
 
 
 moment.locale('ko');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { backUrl } from '../config/back/config';
+import { backUrl } from '../config/config';
 
   function ImageSlider(props) {
     return (

@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer';
 import useSWR from 'swr';
 import styled from 'styled-components';
-import { backUrl } from '../config/back/config';
+import { backUrl } from '../config/config';
 const fetcher = (url) => axios.get(url, { withCredentials: true }).then((result) => result.data);
 
 

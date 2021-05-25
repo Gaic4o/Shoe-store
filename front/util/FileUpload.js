@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import Dropzone from 'react-dropzone'
 import styled from 'styled-components'
-import { backUrl } from '../config/back/config';
+import { backUrl } from '../config/config';
 
 
 
