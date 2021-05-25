@@ -55,6 +55,6 @@ app.use('/user', userRouter);
 app.use('/product', productRouter);
 app.use('/uploads', express.static('uploads'));
 
-app.listen(80, () => {
+app.listen(3060, () => {
   console.log('서버 실행 중!');
 });
