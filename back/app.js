@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(morgan('dev'));
 }
 app.use(cors({
-  origin: ['http://localhost:3000', 'minsumall.com', 'http://52.79.208.191'],
+  origin: ['http://localhost:3000', 'minsumall.com', 'http://52.79.250.191'],
   credentials: true,
 }));
 
