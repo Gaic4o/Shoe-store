@@ -5,8 +5,6 @@ const path = require('path');
 const { Op } = require('sequelize');
 const { Product, Image, User, Comment} = require('../models')
 const { isLoggedIn } = require('./middleware');
-const multerS3 = require('multer-s3');
-const AWS = require('aws-sdk');
 const router = express.Router();
  
 
@@ -18,31 +16,17 @@ try {
     fs.mkdirSync('uploads');
   }
   
- AWS.config.update({
-     accessKeyId: process.env.S3_ACCESS_KEY_ID,
-     secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-     region: 'ap-south-1',
- })
- const upload = multer({
-    storage: multerS3({
-      s3: new AWS.S3(),
-      bucket: 'minsu-s3',
-      key(req, file, cb) {
-        cb(null, `original/${Date.now()}_${path.basename(file.originalname)}`)
-      }
-    }),
-    limits: { fileSize: 20 * 1024 * 1024 }, // 20MB
-  });
-//   var storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//       cb(null, 'uploads/')
-//     },
-//     filename: function (req, file, cb) {
-//       cb(null, `${Date.now()}_${file.originalname}`)
-//     }
-//   })
+ 
+  var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+      cb(null, `${Date.now()}_${file.originalname}`)
+    }
+  })
 
-//   var upload = multer({ storage: storage }).single('file')
+  var upload = multer({ storage: storage }).single('file')
 
 
 
