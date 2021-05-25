@@ -27,18 +27,19 @@ if (process.env.NODE_ENV === 'production') {
   app.use(morgan('combined'));
   app.use(hpp());
   app.use(helmet());
+  app.use(cors({
+    origin: [ 'http://minsusu.shop'],
+    credentials: true,
+  }));
+  
 } else {
   app.use(morgan('dev'));
+  app.use(cors({
+    origin: true,
+    credentials: true,
+  }));
+  
 }
-app.use(cors({
-  origin: ['http://localhost:3000', 'http://minsusu.shop'],
-  credentials: true,
-  cookie: {
-    httpOnly: true,
-    secure: false,
-    domain: process.env.NODE_ENV === 'production' && '.minsusu.shop'
-  }
-}));
 
 
 
@@ -53,6 +54,11 @@ app.use(session({ // 00 60 다른 서버 데이터가 공유 저절로 되는 �
   saveUninitialized: false,
   resave: false,
   secret: process.env.COOKIE_SECRET,
+  cookie: {
+    httpOnly: true,
+    secure: false,
+    domain: process.env.NODE_ENV === 'production' && '.minsusu.shop'
+  }
 })); 
 app.use(passport.initialize());
 app.use(passport.session());
