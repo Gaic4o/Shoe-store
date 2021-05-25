@@ -11,11 +11,17 @@ const morgan = require('morgan');
 const path = require('path');
 const hpp = require('hpp');
 const helmet = require('helmet');
-
+const passportConfig = require('./passport');
 
 
 dotenv.config();
 const app = express();
+db.sequelize.sync()
+  .then(() => {
+    console.log('db 연결 성공');
+  })
+  .catch(console.error);
+passportConfig();
 
 if (process.env.NODE_ENV === 'production') {
   app.use(morgan('combined'));
@@ -55,6 +61,6 @@ app.use('/user', userRouter);
 app.use('/product', productRouter);
 app.use('/uploads', express.static('uploads'));
 
-app.listen(80, () => {
+app.listen(3060, () => {
   console.log('서버 실행 중!');
 });

@@ -1,5 +1,5 @@
 const passport = require('passport');
-const local = require('./local');
+const local = require('./local')
 const { User } = require('../models');
 
 module.exports = () => {
