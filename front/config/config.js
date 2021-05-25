@@ -1,1 +1,1 @@
-export const backUrl = 'http://52.79.89.40';
+export const backUrl = 'http://api.minsusu.shop';
