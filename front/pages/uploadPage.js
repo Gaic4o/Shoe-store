@@ -70,7 +70,6 @@ const Codys = [
     {key: 1, value: '캐쥬얼 신발'},
     {key: 2, value: '힙한 신발'},
     {key: 3, value: '운동 할 떄 신발'},
-    {key: 4, value: '신상 신발'},
 ]
 
 const Brands = [

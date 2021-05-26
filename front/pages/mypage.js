@@ -116,7 +116,7 @@ function mypage(props) {
             <Modify>
               <ModifyH1>회원 정보 수정</ModifyH1>
             <ModifyForm onSubmit={NickSubmit}>
-            <p>닉네임 수정</p>
+            <p>아이디 수정</p>
                 <ModifyInput type="text" value={regid} onChange={onChangeRegid} />
                 <ModifyButton onClick={() => changeNicknameLoading}>수정</ModifyButton>
             </ModifyForm>
