@@ -7,6 +7,7 @@ import axios from 'axios';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 
 export const ShoesForm = styled.form`
@@ -91,6 +92,10 @@ function uploadPage() {
     const [ Cody, setCody ] = useState(1);
     const [ Brand, setBrand ] = useState(1);
     const [Images, setImages] = useState([])
+
+
+
+
 
     
     const updateImages = (newImages) => {

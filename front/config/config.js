@@ -1,1 +1,1 @@
-export const backUrl = 'http://api.minsusu.shop';
+export const backUrl = process.env.NODE_ENV  === 'production' ? 'http://api.minsusu.shop' : 'http://localhost:80';

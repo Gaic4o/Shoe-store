@@ -3,7 +3,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import useInput from '../hooks/useInput';
 import { COMMENT_LOADING_REQUEST } from '../reducers/product';
-
+import * as Yup from 'yup';
 import styled from 'styled-components';
 
 
