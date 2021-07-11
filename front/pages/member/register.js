@@ -13,6 +13,7 @@ import { END } from 'redux-saga';
 import Header from '../../components/Header'
 
 
+
 export const Nameh1 = styled.p`
 font-family: 'RixYeoljeongdo_Regular';
 font-size: 25px;
@@ -58,6 +59,11 @@ cursor: pointer;
 const Error = styled.div`
     color: red;
 `;
+
+const Success = styled.div`
+    border: 1px solid red;
+`
+
 
 function register() {
     const [passwordCheck, setPasswordCheck] = useState('');
@@ -173,9 +179,9 @@ function register() {
           
                 <LoadingButton type="primary" onClick={() => signUpLoading}>가입하기</LoadingButton>
                 
-         
+                
             </form>
-         
+                {SignUpDone && <Success>회원가입 되었습니다!!!! 로그인 해주세요.</Success>}
             </div>
        </Register>
        </>

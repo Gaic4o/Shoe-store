@@ -103,12 +103,12 @@ function login() {
         <form onSubmit={onSubmitForm}>
         <Member>
             <MemberLabel>아이디</MemberLabel>
-            <MemberInput id="user-regid" name="user-regid" value={regid} onChange={onChangeRegid} type="text" required/>
+            <MemberInput id="user-regid" name="user-regid" value={regid} onChange={onChangeRegid} type="text" placeholder="아이디" required/>
         </Member>
 
         <Member>
             <MemberLabel>패스워드</MemberLabel>
-            <MemberInput id="user-password" name="user-password" value={password} onChange={onChangePassword} type="password" required />
+            <MemberInput id="user-password" name="user-password" value={password} onChange={onChangePassword} type="password" placeholder="비밀번호" required />
         </Member>
 
         <LoginButtons type="primary" onClick={() => logInLoading} >로그인</LoginButtons>
