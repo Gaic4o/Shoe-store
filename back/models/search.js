@@ -10,3 +10,8 @@ module.exports = class Search extends Model {
         })
     }
 }
+
+videoMp: {
+    type: DataTypes.STRING(50),
+    allowNull: false,
+  },

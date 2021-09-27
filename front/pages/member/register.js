@@ -61,13 +61,16 @@ const Error = styled.div`
 `;
 
 const Success = styled.div`
-    border: 1px solid red;
+    color: #2eb67d;
+    font-weight: bold;
 `
 
 
 function register() {
     const [passwordCheck, setPasswordCheck] = useState('');
-    const [passwordError, setPasswordError] = useState(false);
+    const [signUpError, setSignUpError] = useState(false);
+    const [signUpSuccess, setSignUpSuccess] = useState(false);
+    const [mismatchError, setMismatchError] = useState(false);
     
     const [name, onChangeName] = useInput('');
     const [email, onChangeEmail] = useInput('');
@@ -97,20 +100,21 @@ function register() {
 
     const onChangePasswordCheck = useCallback((e) => {
         setPasswordCheck(e.target.value);
-        setPasswordError(e.target.value !== password); 
+        setMismatchError(password !== e.target.value);
     }, [password]);
 
 
     const onSubmit = useCallback((e) => {
         e.preventDefault()
-        if(password !== passwordCheck) {
-            return setPasswordError(true);
-        }
+        if (!regid || !regid.trim()) {
+            return;
+          }
+        setSignUpError(false);
+        setSignUpSuccess(true);
         console.log(regid, password);
     dispatch({
         type: SIGN_UP_REQUEST,
         data: {name, email, regid, password},
-        
     })
 }, [name, email, regid, passwordCheck, password]);
 
@@ -174,14 +178,16 @@ function register() {
                 <div>
                 <InfoUser id="user-password-check" name="user-password-check" type="password" value={passwordCheck} placeholder="비밀번호 재입력" onChange={onChangePasswordCheck} required />
                 </div>
-                {passwordError && <Error>비밀번호 일치하지 않아요!</Error>}
-
-          
+             
+                {mismatchError && <Error>비밀번호가 일치하지 않습니다.</Error>}
+                {!regid && <Error>닉네임을 입력해주세요.</Error>}
+                {signUpError && <Error>이미 가입된 이메일입니다.</Error>}
+                {signUpSuccess && <Success>회원가입되었습니다! 로그인해주세요.</Success>}
                 <LoadingButton type="primary" onClick={() => signUpLoading}>가입하기</LoadingButton>
                 
                 
             </form>
-                {SignUpDone && <Success>회원가입 되었습니다!!!! 로그인 해주세요.</Success>}
+      
             </div>
        </Register>
        </>
